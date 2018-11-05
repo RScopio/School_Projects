@@ -1,0 +1,56 @@
+Ryan Scopio
+
+Homework 4 - 7th Edition
+
+Chapter 7:
+2) 
+Mutual exclusion: Chopsticks cannot be shared with another philosopher as they are picked up. If they were shared, then deadlock would be prevented.
+Hold and wait: The philosophers will pick up only one chopstick at a time and wait for another chopstick when there aren’t any more available. If philosophers could pick up two at a time the deadlock could be prevented.
+No preemption: Once a chopstick is picked up, it cannot be taken away. If it were able to, the deadlock would be prevented.
+Circular wait: In a round table, the philosophers are picking up a chopstick of another philosopher sitting next to him, who will also need that chopstick. If a philosopher can grab the chopstick of another, who would have never been able to use it, then the deadlock would be prevented.
+
+6) With four resources and three processes, each process can take a resource, and the last resource can go to any one of the processes, in which that process will have gotten its two necessary resources, and then return it for other processes to use as it finishes.
+
+8) When a philosopher grabs their first chopstick, do not let give him any if another philosopher has only one chopstick.
+
+11) 
+a. Yes, there are processes that can be satisfied in an order to satisfy all processes.
+b. Yes, the sequence in which processes can be processed can be P1, P0, P2, P3, P4.
+
+
+Chapter 8:
+1) Internal fragmentation has empty addresses inside a block of memory that was allocated for a client. External fragmentation has empty blocks between jobs where a job was previously ended.
+
+4) 
+a. Reallocation of the entire program as there will be no space for the program to grow its allocated space.
+b. Reallocation of the segment as there will be no space for it to grow.
+c. Reallocation is not required. Incremental allocation of new pages is possible.
+
+5) 
+a. Contiguous-memory will suffer from external fragmentation as processes are allocated contiguously, but a job had finished, leaving empty gaps between address blocks. Pure segmentation will suffer the same way in which a segment can be removed, leaving a predefined size of empty addresses between segments. Pure paging will not suffer from external fragmentation.
+b. Contiguous-memory and pure segmentation use variable sized blocks of memory, minimizing the amount of space needed to allocate, thus reducing internal fragmentation. Pure paging, however, uses constant sized blocks of memory, resulting in internal fragmentation.
+c. Contiguous-memory allocation will not have the ability to share code across processes as there are no segments in which other processes may read the block of code from. Pure segmentation will allow ability to share code where the data will be exclusive to its reader. Pure paging will also allow the ability to share code.
+
+9) 
+a. 200 ns to access the page table and 200 ns to access the word in memory for a total of 400 ns.
+b. (.75*200)+(.25*400) where 75% of the time, it would be 200 ns if the entry was in the TLB; 25% of the time, it would be 400 ns as the search would have to go through the page table and to memory for the word.
+
+13) As the page table becomes large, it could simplify the memory allocation. It also enables the ability to swap portions of the page table that are not in use.
+
+
+Chapter 9:
+12) A reference bit can be used, resetting it when it’s time for examination, and setting it to 1 when the page has been referenced. This would be easy to implement, but would be limited to only a certain amount of time in which a page may be replaced if it hadn’t been referenced within the time between examinations when that page may still be wanted.
+
+13) 
+a. 
+    i. 0
+    ii. When the page frame is referenced with a new page.
+    iii. Not necessary
+    iv. The page frame with the lowest counter or FIFO.
+b. 14 page faults
+c. 11 page faults (50%).
+
+14) It will always take the 1µs and will take another 1µs if the entry was not found. 2% of the time, it will have to refer to the paging disk.
+1µs + (.20 * 1µs) + (.02 * 20ms) = 401.2 µs
+
+15) Thrashing is caused by not allocating enough pages required by a process. The system can detect thrashing by comparing the level of CPU utilization with the level of multiprogramming. It can be eliminated by reducing the level of multiprogramming.

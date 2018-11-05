@@ -1,0 +1,50 @@
+ryan@chrx:~/Documents/OS-Projects/Project7_SleepingBarber$ gcc -pthread sleepingBarber.c 
+ryan@chrx:~/Documents/OS-Projects/Project7_SleepingBarber$ ./a.out
+Use: SleepBarber <Num Customers> <Num Chairs> <rand seed>
+ryan@chrx:~/Documents/OS-Projects/Project7_SleepingBarber$ ./a.out 5 3 seed
+
+SleepBarber.c
+
+A solution to the sleeping barber problem using semaphores.
+The barber is sleeping
+Customer 1 leaving for barber shop.
+Customer 3 leaving for barber shop.
+Customer 4 leaving for barber shop.
+Customer 0 leaving for barber shop.
+Customer 2 leaving for barber shop.
+Customer 1 arrived at barber shop.
+Customer 1 entering waiting room.
+Customer 0 arrived at barber shop.
+Customer 0 entering waiting room.
+Customer 1 waking the barber.
+The barber is cutting hair
+Customer 2 arrived at barber shop.
+Customer 2 entering waiting room.
+Customer 4 arrived at barber shop.
+Customer 4 entering waiting room.
+The barber has finished cutting hair.
+The barber is sleeping
+Customer 1 leaving barber shop.
+Customer 0 waking the barber.
+The barber is cutting hair
+Customer 3 arrived at barber shop.
+Customer 3 entering waiting room.
+The barber has finished cutting hair.
+The barber is sleeping
+Customer 0 leaving barber shop.
+Customer 2 waking the barber.
+The barber is cutting hair
+The barber has finished cutting hair.
+The barber is sleeping
+Customer 2 leaving barber shop.
+Customer 4 waking the barber.
+The barber is cutting hair
+The barber has finished cutting hair.
+The barber is sleeping
+Customer 4 leaving barber shop.
+Customer 3 waking the barber.
+The barber is cutting hair
+The barber has finished cutting hair.
+The barber is sleeping
+Customer 3 leaving barber shop.
+The barber is going home for the day.
